@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Material Design for Bootstrap</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <!-- Bootstrap -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Material Design -->
+  <link href="./css/material.css" rel="stylesheet">
+  <link href="./css/ripples.css" rel="stylesheet">
+
+
+
+
+  <!-- jQuery -->
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+
+
+
+<div class="container-fluid main">
+  <div class="row">
+
+    <div class="pages col-xs-9">
+      <div class="row">
+        <div class="col-xs-10">
+          <div class="well page active" id="about">
+          <div class="well page" id="input">
+
+
+            <div class="inputs">
+              <h2>Input label styles
+                <small>default sizing</small>
+              </h2>
+
+              <div class="form-group label-static">
+                <label for="i2" class="control-label">label-static</label>
+                <input type="email" class="form-control" id="i2" placeholder="placeholder attribute">
+
+                <p class="help-block">This is a hint as a <code>p.help-block.hint</code></p>
+              </div>
+
+              <div class="form-group label-floating">
+                <label for="i5" class="control-label">label-floating</label>
+                <input type="email" class="form-control" id="i5">
+                <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+              </div>
+
+              <div class="form-group label-placeholder">
+                <label for="i5p" class="control-label">label-placeholder</label>
+                <input type="email" class="form-control" id="i5p">
+                <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+              </div>
+
+              <form>
+                <div class="form-group">
+                  <label for="i5ps" class="control-label col-sm-2">Column label</label>
+
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="i5ps" placeholder="placeholder attribute">
+                    <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+                  </div>
+                </div>
+              </form>
+              <br/>
+              <br/>
+
+              <h2>Input - floating labels
+                <small>form-group sizing</small>
+              </h2>
+              <div class="form-group form-group-sm label-floating">
+                <label for="i4" class="control-label">Email address form-group-sm</label>
+                <input type="email" class="form-control" id="i4">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group label-floating">
+                <label for="i5i" class="control-label">Email address default size</label>
+                <input type="email" class="form-control" id="i5i">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group form-group-lg label-floating">
+                <label for="i6" class="control-label">Email address form-group-lg</label>
+                <input type="email" class="form-control" id="i6">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+            </div>
+          </div>
+
+            </div>
+          </div>
+
+<!-- Open source code -->
+<script>
+  window.page = window.location.hash || "#about";
+
+  $(document).ready(function () {
+    if (window.page != "#about") {
+      $(".menu").find("li[data-target=" + window.page + "]").trigger("click");
+    }
+  });
+
+  $(window).on("resize", function () {
+    $("html, body").height($(window).height());
+    $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight());
+    $(".pages").height($(window).height());
+  }).trigger("resize");
+
+  $(".menu li").click(function () {
+    // Menu
+    if (!$(this).data("target")) return;
+    if ($(this).is(".active")) return;
+    $(".menu li").not($(this)).removeClass("active");
+    $(".page").not(page).removeClass("active").hide();
+    window.page = $(this).data("target");
+    var page = $(window.page);
+    window.location.hash = window.page;
+    $(this).addClass("active");
+
+
+    page.show();
+
+    var totop = setInterval(function () {
+      $(".pages").animate({scrollTop: 0}, 0);
+    }, 1);
+
+    setTimeout(function () {
+      page.addClass("active");
+      setTimeout(function () {
+        clearInterval(totop);
+      }, 1000);
+    }, 100);
+  });
+
+  function cleanSource(html) {
+    var lines = html.split(/\n/);
+
+    lines.shift();
+    lines.splice(-1, 1);
+
+    var indentSize = lines[0].length - lines[0].trim().length,
+        re = new RegExp(" {" + indentSize + "}");
+
+    lines = lines.map(function (line) {
+      if (line.match(re)) {
+        line = line.substring(indentSize);
+      }
+
+      return line;
+    });
+
+    lines = lines.join("\n");
+
+    return lines;
+  }
+
+  $("#opensource").click(function () {
+    $.get(window.location.href, function (data) {
+      var html = $(data).find(window.page).html();
+      html = cleanSource(html);
+      $("#source-modal pre").text(html);
+      $("#source-modal").modal();
+    });
+  });
+</script>
+
+<!-- Twitter Bootstrap -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Material Design for Bootstrap -->
+<script src="./js/material.js"></script>
+<script src="./js/ripple.js"></script>
+<script>
+  $.material.init();
+</script>
+
+
+
+
+</body>
+</html>

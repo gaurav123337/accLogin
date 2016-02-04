@@ -1,0 +1,108 @@
+<html><head>
+	<title>Login</title>
+	<link href="css/bootstrap/bootstrap.min.css" media="screen" type="text/css" rel="stylesheet">
+
+
+  <!-- Bootstrap -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap Material Design -->
+  <link href="./css/material.css" rel="stylesheet">
+  <link href="./css/ripples.css" rel="stylesheet">
+
+    <!-- <link type="text/css" href="css/style.css" rel="stylesheet"> -->
+
+    <!--Plugin js-->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+	<!-- Twitter Bootstrap -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+	<!--<script src="js/material.min.js.map" type="text/javascript"></script>
+	<script src="js/custom.js" type="text/javascript"></script>-->
+	<script src="js/service.js" type="text/javascript"></script>
+	<!--<script type="text/javascript" src="js/customer.js"></script>-->
+
+</head>
+<body >
+
+	<div class="header container">
+		<!--<div>
+			<p class="pull-left white-background no-magrin logo-padding">
+				<img alt="logo" src="image/jira-logo-scaled.png" class="pull-left">
+			</p>
+
+			<p class="pull-right white-background no-magrin logo-padding header-margin">
+				<img title="logout" alt="logo" src="image/logOut.png" class="pull-left">
+			</p>
+		</div>-->
+		<hr>
+	</div>
+
+	<header role="banner" id="top" class="navbar navbar-static-top bs-docs-nav">
+   <div class="container">
+      <div class="navbar-header"> <button aria-expanded="false" aria-controls="bs-navbar" data-target="#bs-navbar" data-toggle="collapse" type="button" class="navbar-toggle collapsed"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> </div>
+      <nav style="height: 1px;" aria-expanded="false" class="navbar-collapse collapse" id="bs-navbar">
+         <ul class="nav navbar-nav nav-pills">
+
+         </ul>
+         <ul class="nav navbar-nav navbar-right">   </ul>
+      </nav>
+   </div>
+</header>
+	<!-- <div class="welcome" style="display: block;">
+	    <form id="form" >
+	        <div class="container ">
+	            <p style="display:inline-block" class="pull-left full-width">
+	                <label class="display quarter-width pull-left custom-width">User Name:</label>
+	                <input type="text" value="" style="display:inline-block" name="User Name" class="inline-display form-control" id="userId">
+
+	                </p>
+	                <p style="display:inline-block" class="pull-left full-width">
+	                    <label class="display quarter-width pull-left custom-width">Password:</label>
+	                    <input type="password" value="" style="display:inline-block" name="password" class="inline-display form-control" id="pass">
+	                    </p>
+	                    <p style="display:inline-block" class="pull-left full-width"></p>
+	        </div>
+	        <div class="container ">
+	            <button onclick="login('userId','pass')" class="btn btn-primary btn-raised" type="button">Login</button>
+
+	        </div>
+	        <div class="container warningMessage"></div>
+	    </form>
+	    <div class="space"></div>
+	    </div> -->
+
+    <div class="welcome" style="display: block;">
+    <form id="form" >
+        <div class="container ">
+            <div class="form-group label-floating">
+            	<label for="i5" class="control-label">User Name:</label>
+            	<input name="User Name" type="text" class="form-control" id="userId">
+            </div>
+			<div class="form-group label-floating">
+				<label for="i5" class="control-label">Password:</label>
+				<input name="password" type="password" class="form-control" id="pass">
+			</div>
+        </div>
+		<div class="container ">
+		    <button onclick="login('userId','pass')" class="btn btn-primary btn-raised" type="button">Login</button>
+		    <!--<input type="submit" class="btn btn-primary" value="Login">-->
+		</div>
+        <div class="container warningMessage"></div>
+    </form>
+    <div class="space"></div>
+</div>
+<div class="localVal"></div>
+
+
+
+
+<!-- Material Design for Bootstrap -->
+<script src="./js/material.js"></script>
+<script src="./js/ripple.js"></script>
+<script>
+  $.material.init();
+</script>
+
+</body></html>

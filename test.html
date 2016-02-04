@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Material Design for Bootstrap</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Material Design -->
+  <link href="./css/material.css" rel="stylesheet">
+  <link href="./css/ripples.css" rel="stylesheet">
+
+  <!-- Dropdown.js -->
+  <link href="//cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+
+
+
+  <!-- jQuery -->
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body>
+
+<a href="https://github.com/FezVrasta/bootstrap-material-design" style="position: absolute; top: 0; left: 0; border: 0; z-index: 10;"><img src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+<div class="header-panel shadow-z-2">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3">
+        <h1>Paper Elements</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid main">
+  <div class="row">
+    <nav class="col-xs-3 menu">
+      <ul>
+        <li class="active withripple" data-target="#about">Material Design for Bootstrap</li>
+        <li class="withripple" data-target="#getting-started">Getting Started</li>
+        <li><a href="bootstrap-elements.html" target="_blank">Bootstrap elements <i class="mdi-action-open-in-new"></i></a>
+        </li>
+        <li class="withripple" data-target="#checkbox">Checkbox</li>
+        <li class="withripple" data-target="#radio-button">Radio Button</li>
+        <li class="withripple" data-target="#toggle-button">Toggle Button</li>
+        <li class="withripple" data-target="#input">Input</li>
+        <li class="withripple" data-target="#fileinput">File Input</li>
+        <li class="withripple" data-target="#navbar">Navbar</li>
+        <li class="withripple" data-target="#progress-bar">Progress Bar</li>
+        <li class="withripple" data-target="#slider">Slider</li>
+        <li class="withripple" data-target="#dropdown">Dropdown (Work in progress)</li>
+        <li class="withripple" data-target="#dropdown-menu">Dropdown Menu</li>
+        <li class="withripple" data-target="#dialog">Dialog</li>
+      </ul>
+    </nav>
+    <div class="pages col-xs-9">
+      <div class="row">
+        <div class="col-xs-10">
+          <div class="well page active" id="about">
+
+
+            <p>If you want support the development of this project please consider donate something:</p>
+            <a href="https://www.gratipay.com/FezVrasta/" target="_blank" class="btn btn-primary">Donate with Gratipay</a>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" id="paypal" method="post" target="_blank" style="display: inline-block;">
+              <input type="hidden" name="cmd" value="_s-xclick">
+
+              <div class="btn btn-primary">
+                <select name="hosted_button_id" title="I can't accept less than 5 euro due to accounting troubles">
+                  <option value="DAAK965W2DKYE">&euro; 5,00</option>
+                  <option value="28PH77JK5QWFE">&euro; 10,00</option>
+                  <option value="6B6TJAJ2R99HS">&euro; 15,00</option>
+                  <option value="GJCEKCQFMBVHA">&euro; 20,00</option>
+                  <option value="U7QXM95C8RJ9W">&euro; 25,00</option>
+                  <option value="55S3VBB3U4NAS">&euro; 50,00</option>
+                </select>
+                <input type="submit" value="DONATE WITH PAYPAL" name="submit">
+              </div>
+            </form>
+
+          <div class="well page" id="getting-started">
+
+
+            <p>Once copied you need to initialize the material javascript by adding the following javascript to your site,</p>
+            <pre><code>$.material.init()</code></pre>
+          </div>
+
+          <div class="well page" id="checkbox">
+            <h1 class="header">Checkbox</h1>
+
+            <h2>Default <small>inside a <code>.form-group</code></small></h2>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Notifications
+                </label>
+              </div>
+              <p class="help-block">Notify me about updates to apps or games that I've downloaded</p>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked> Auto-updates
+                </label>
+              </div>
+              <p class="help-block">Auto-update apps over wifi only</p>
+            </div>
+
+            <h2>Horizontal form with column label variations</h2>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-2" for="ch1">Touch sounds</label>
+                <div class="col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <input id="ch1" type="checkbox" checked>
+                    </label>
+                  </div>
+                  <p class="help-block">This shows the generic label variant.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="ch3">Vibrate on touch</label>
+                <div class="col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <input id="ch3" type="checkbox">
+                    </label>
+                  </div>
+                  <p class="help-block">This shows the <code>control-label</code> variant.</p>
+                </div>
+              </div>
+            </form>
+
+            <h2>Default <small>outside a <code>.form-group</code></small></h2>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Notifications
+              </label>
+            </div>
+            <p class="help-block">Without a <code>.form-group</code>, <code>.help-block</code> always shows</p>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked> Auto-updates
+              </label>
+            </div>
+            <p class="help-block">Without a <code>.form-group</code>, <code>.help-block</code> sizing is the same as the <code>label</code></p>
+
+          </div>
+          <div class="well page" id="radio-button">
+            <h1 class="header">Radio buttons</h1>
+
+            <h2>Default <small>outside a <code>.form-group</code></small></h2>
+            <div class="radio">
+              <label>
+                <input type="radio" name="sample1" value="option1" checked="">
+                Always
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="sample1" value="option1">
+                Only when plugged in
+              </label>
+            </div>
+
+            <h2>Default inside a <small><code>.form-group</code></small></h2>
+            <div class="form-group">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="sample1" value="option1" checked="">
+                  Always
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="sample1" value="option1">
+                  Only when plugged in
+                </label>
+              </div>
+            </div>
+
+          </div>
+          <div class="well page" id="toggle-button">
+
+            <h1 class="header">Toggle Button</h1>
+
+            <div class="togglebutton">
+              <label>
+                Wi-Fi
+                <input type="checkbox" checked>
+              </label>
+            </div>
+            <div class="togglebutton">
+              <label>
+                Bluetooth
+                <input type="checkbox">
+              </label>
+            </div>
+          </div>
+          <div class="well page" id="input">
+            <h1 class="header">Input
+              <small><a href="http://www.google.com/design/spec/components/text-fields.html">specification</a></small>
+            </h1>
+
+            <div class="inputs">
+              <h2>Input label styles
+                <small>default sizing</small>
+              </h2>
+
+              <div class="form-group label-static">
+                <label for="i2" class="control-label">label-static</label>
+                <input type="email" class="form-control" id="i2" placeholder="placeholder attribute">
+
+                <p class="help-block">This is a hint as a <code>p.help-block.hint</code></p>
+              </div>
+
+              <div class="form-group label-floating">
+                <label for="i5" class="control-label">label-floating</label>
+                <input type="email" class="form-control" id="i5">
+                <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+              </div>
+
+              <div class="form-group label-placeholder">
+                <label for="i5p" class="control-label">label-placeholder</label>
+                <input type="email" class="form-control" id="i5p">
+                <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+              </div>
+
+              <form>
+                <div class="form-group">
+                  <label for="i5ps" class="control-label col-sm-2">Column label</label>
+
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="i5ps" placeholder="placeholder attribute">
+                    <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+                  </div>
+                </div>
+              </form>
+              <br/>
+              <br/>
+
+              <h2>Input - floating labels
+                <small>form-group sizing</small>
+              </h2>
+              <div class="form-group form-group-sm label-floating">
+                <label for="i4" class="control-label">Email address form-group-sm</label>
+                <input type="email" class="form-control" id="i4">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group label-floating">
+                <label for="i5i" class="control-label">Email address default size</label>
+                <input type="email" class="form-control" id="i5i">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group form-group-lg label-floating">
+                <label for="i6" class="control-label">Email address form-group-lg</label>
+                <input type="email" class="form-control" id="i6">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <h2>Input - static labels
+                <small>form-group sizing</small>
+              </h2>
+
+              <div class="form-group form-group-sm label-static">
+                <label for="si4" class="control-label">Email address form-group-sm</label>
+                <input type="email" class="form-control" id="si4" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group label-static">
+                <label for="si5i" class="control-label">Email address default size</label>
+                <input type="email" class="form-control" id="si5i" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group form-group-lg label-static">
+                <label for="si6" class="control-label">Email address form-group-lg</label>
+                <input type="email" class="form-control" id="si6" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <h2>Input - no labels
+                <small>form-group sizing</small>
+              </h2>
+
+              <div class="form-group form-group-sm">
+                <label for="si4n" class="control-label">Email address form-group-sm</label>
+                <input type="email" class="form-control" id="si4n" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <label for="si5in" class="control-label">Email address default size</label>
+                <input type="email" class="form-control" id="si5in" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group form-group-lg">
+                <label for="si6n" class="control-label">Email address form-group-lg</label>
+                <input type="email" class="form-control" id="si6n" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+
+              <h2>Input -
+                <small>floating label feedback variants</small>
+              </h2>
+              <div class="form-group has-success label-floating">
+                <label for="f1" class="control-label">Email address has-success</label>
+                <input type="email" class="form-control" id="f1">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group has-warning label-floating">
+                <label for="f2" class="control-label">Email address has-warning</label>
+                <input type="email" class="form-control" id="f2">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group has-error label-floating">
+                <label for="f3" class="control-label">Email address has-error</label>
+                <input type="email" class="form-control" id="f3">
+                <span class="help-block">Please enter a valid email address</span>
+              </div>
+
+
+              <h2>Input - Legacy</h2>
+              <!-- Exercise backwards compatibility without form-group -->
+              <input type="text" class="form-control floating-label" placeholder="Legacy floating label as placeholder attribute" data-hint="This is a hint using a legacy <code>data-hint</code> attribute on the input">
+
+              <h2>Textarea</h2>
+
+              <div class="form-group label-floating">
+                <label for="t1" class="control-label">Floating label</label>
+                <textarea id="t1" class="form-control"></textarea>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" placeholder="placeholder without label"></textarea>
+              </div>
+
+              <!-- legacy markup -->
+              <textarea class="form-control floating-label" placeholder="legacy floating label as placeholder"></textarea>
+
+              <h2>Validation</h2>
+
+              <div class="form-group label-floating">
+                <label for="111" class="control-label">email</label>
+                <input type="email" class="form-control" id="111">
+              </div>
+              <div class="form-group label-floating">
+                <label for="222" class="control-label">number</label>
+                <input type="number" class="form-control" id="222">
+              </div>
+
+              <h2>Disabled</h2>
+
+              <div class="form-group label-floating">
+                <label for="333" class="control-label">email</label>
+                <input disabled type="text" class="form-control" id="333">
+              </div>
+              <div class="form-group label-floating">
+                <label for="444" class="control-label">number</label>
+                <input disabled type="text" class="form-control" id="444">
+              </div>
+
+              <h2>Hints</h2>
+
+              <div class="form-group label-floating">
+                <label for="555" class="control-label">label</label>
+                <input type="text" class="form-control" id="555">
+
+                <p class="help-block">Some helpful hint</p>
+              </div>
+              <div class="form-group label-floating">
+                <label for="676" class="control-label">label</label>
+                <input type="email" class="form-control" id="676">
+
+                <p class="help-block">A valid email contains an @ character</p>
+              </div>
+
+
+              <h2>Styling</h2>
+
+              <div class="form-group has-success">
+                <input type="text" class="form-control" placeholder="placeholder">
+              </div>
+              <div class="form-group has-success label-floating">
+                <label for="777" class="control-label">floating label</label>
+                <input type="text" class="form-control" id="777">
+              </div>
+            </div>
+          </div>
+          <div class="well page" id="fileinput">
+            <h1 class="header">File Input</h1>
+
+            <div class="form-group">
+              <label class="control-label" for="inputFile2">Static label</label>
+              <input type="file" id="inputFile2" multiple>
+              <input type="text" readonly class="form-control" placeholder="Browse2...">
+            </div>
+
+            <div class="form-group">
+              <!--<label class="control-label" for="inputFile3">File</label>-->
+              <input type="file" id="inputFile3" multiple>
+              <input type="text" readonly class="form-control" placeholder="Placeholder only...">
+            </div>
+
+            <div class="form-group">
+              <input type="file" id="inputFile4" multiple>
+
+              <div class="input-group">
+                <input type="text" readonly class="form-control" placeholder="Placeholder w/input-group...">
+                <span class="input-group-btn input-group-sm">
+                  <button type="button" class="btn btn-fab btn-fab-mini">
+                    <i class="mdi-editor-attach-file"></i>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="well page" id="navbar">
+            <h1 class="header">Navbar</h1>
+
+            <div class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0)">Active</a></li>
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                      <a href="http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                        <li><a href="javascript:void(0)">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" class="form-control col-sm-8" placeholder="Search">
+                    </div>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                      <a href="http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar navbar-warning">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-warning-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0)">Active</a></li>
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                      <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                        <li><a href="javascript:void(0)">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" class="form-control col-sm-8" placeholder="Search">
+                    </div>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                      <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-inverse-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0)">Active</a></li>
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                      <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                        <li><a href="javascript:void(0)">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" class="form-control col-sm-8" placeholder="Search">
+                    </div>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                      <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar navbar-material-light-blue-300">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="javascript:void(0)">Brand</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:void(0)">Active</a></li>
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                      <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                        <li><a href="javascript:void(0)">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" class="form-control col-sm-8" placeholder="Search">
+                    </div>
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0)">Link</a></li>
+                    <li class="dropdown">
+                      <a href="index.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)">Action</a></li>
+                        <li><a href="javascript:void(0)">Another action</a></li>
+                        <li><a href="javascript:void(0)">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+ <!--<div class="well page active" id="input" style="display: block;">
+            <h1 class="header">Input
+              <small><a href="http://www.google.com/design/spec/components/text-fields.html">specification</a></small>
+            </h1>
+
+            <div class="inputs">
+              <h2>Input label styles
+                <small>default sizing</small>
+              </h2>
+
+              <div class="form-group label-static is-empty">
+                <label for="i2" class="control-label">label-static</label>
+                <input type="email" class="form-control" id="i2" placeholder="placeholder attribute">
+
+                <p class="help-block">This is a hint as a <code>p.help-block.hint</code></p>
+              <span class="material-input"></span></div>
+
+              <div class="form-group label-floating is-empty">
+                <label for="i5" class="control-label">label-floating</label>
+                <input type="email" class="form-control" id="i5">
+                <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group label-placeholder is-empty">
+                <label for="i5p" class="control-label">label-placeholder</label>
+                <input type="email" class="form-control" id="i5p">
+                <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+              <span class="material-input"></span></div>
+
+              <form>
+                <div class="form-group is-empty">
+                  <label for="i5ps" class="control-label col-sm-2">Column label</label>
+
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="i5ps" placeholder="placeholder attribute">
+                    <span class="help-block">This is a hint as a <code>span.help-block.hint</code></span>
+                  </div>
+                <span class="material-input"></span></div>
+              </form>
+              <br>
+              <br>
+
+              <h2>Input - floating labels
+                <small>form-group sizing</small>
+              </h2>
+              <div class="form-group form-group-sm label-floating is-empty">
+                <label for="i4" class="control-label">Email address form-group-sm</label>
+                <input type="email" class="form-control" id="i4">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group label-floating is-empty">
+                <label for="i5i" class="control-label">Email address default size</label>
+                <input type="email" class="form-control" id="i5i">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group form-group-lg label-floating is-empty">
+                <label for="i6" class="control-label">Email address form-group-lg</label>
+                <input type="email" class="form-control" id="i6">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <h2>Input - static labels
+                <small>form-group sizing</small>
+              </h2>
+
+              <div class="form-group form-group-sm label-static is-empty">
+                <label for="si4" class="control-label">Email address form-group-sm</label>
+                <input type="email" class="form-control" id="si4" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group label-static is-empty">
+                <label for="si5i" class="control-label">Email address default size</label>
+                <input type="email" class="form-control" id="si5i" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group form-group-lg label-static is-empty">
+                <label for="si6" class="control-label">Email address form-group-lg</label>
+                <input type="email" class="form-control" id="si6" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <h2>Input - no labels
+                <small>form-group sizing</small>
+              </h2>
+
+              <div class="form-group form-group-sm is-empty">
+                <label for="si4n" class="control-label">Email address form-group-sm</label>
+                <input type="email" class="form-control" id="si4n" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group is-empty">
+                <label for="si5in" class="control-label">Email address default size</label>
+                <input type="email" class="form-control" id="si5in" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group form-group-lg is-empty">
+                <label for="si6n" class="control-label">Email address form-group-lg</label>
+                <input type="email" class="form-control" id="si6n" placeholder="Placeholder">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+
+              <h2>Input -
+                <small>floating label feedback variants</small>
+              </h2>
+              <div class="form-group has-success label-floating is-empty">
+                <label for="f1" class="control-label">Email address has-success</label>
+                <input type="email" class="form-control" id="f1">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group has-warning label-floating is-empty">
+                <label for="f2" class="control-label">Email address has-warning</label>
+                <input type="email" class="form-control" id="f2">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+              <div class="form-group has-error label-floating is-empty">
+                <label for="f3" class="control-label">Email address has-error</label>
+                <input type="email" class="form-control" id="f3">
+                <span class="help-block">Please enter a valid email address</span>
+              <span class="material-input"></span></div>
+
+
+              <h2>Input - Legacy</h2>
+              <!-- Exercise backwards compatibility without form-group -->
+              <div class="form-group label-floating is-empty"><input type="text" class="form-control"><label class="control-label">Legacy floating label as placeholder attribute</label><p class="help-block">This is a hint using a legacy <code>data-hint</code> attribute on the input</p><span class="material-input"></span></div>
+
+              <h2>Textarea</h2>
+
+              <div class="form-group label-floating is-empty">
+                <label for="t1" class="control-label">Floating label</label>
+                <textarea id="t1" class="form-control"></textarea>
+              <span class="material-input"></span></div>
+              <div class="form-group is-empty">
+                <textarea class="form-control" placeholder="placeholder without label"></textarea>
+              <span class="material-input"></span></div>
+
+              <!-- legacy markup -->
+              <div class="form-group label-floating is-empty"><textarea class="form-control"></textarea><label class="control-label">legacy floating label as placeholder</label><span class="material-input"></span></div>
+
+              <h2>Validation</h2>
+
+              <div class="form-group label-floating is-empty">
+                <label for="111" class="control-label">email</label>
+                <input type="email" class="form-control" id="111">
+              <span class="material-input"></span></div>
+              <div class="form-group label-floating is-empty">
+                <label for="222" class="control-label">number</label>
+                <input type="number" class="form-control" id="222">
+              <span class="material-input"></span></div>
+
+              <h2>Disabled</h2>
+
+              <div class="form-group label-floating is-empty">
+                <label for="333" class="control-label">email</label>
+                <input disabled="" type="text" class="form-control" id="333">
+              <span class="material-input"></span></div>
+              <div class="form-group label-floating is-empty">
+                <label for="444" class="control-label">number</label>
+                <input disabled="" type="text" class="form-control" id="444">
+              <span class="material-input"></span></div>
+
+              <h2>Hints</h2>
+
+              <div class="form-group label-floating is-empty">
+                <label for="555" class="control-label">label</label>
+                <input type="text" class="form-control" id="555">
+
+                <p class="help-block">Some helpful hint</p>
+              <span class="material-input"></span></div>
+              <div class="form-group label-floating is-empty">
+                <label for="676" class="control-label">label</label>
+                <input type="email" class="form-control" id="676">
+
+                <p class="help-block">A valid email contains an @ character</p>
+              <span class="material-input"></span></div>
+
+
+              <h2>Styling</h2>
+
+              <div class="form-group has-success is-empty">
+                <input type="text" class="form-control" placeholder="placeholder">
+              <span class="material-input"></span></div>
+              <div class="form-group has-success label-floating is-empty">
+                <label for="777" class="control-label">floating label</label>
+                <input type="text" class="form-control" id="777">
+              <span class="material-input"></span></div>
+            </div>
+          </div>-->
+
+<!-- Open source code -->
+<script>
+  window.page = window.location.hash || "#about";
+
+  $(document).ready(function () {
+    if (window.page != "#about") {
+      $(".menu").find("li[data-target=" + window.page + "]").trigger("click");
+    }
+  });
+
+  $(window).on("resize", function () {
+    $("html, body").height($(window).height());
+    $(".main, .menu").height($(window).height() - $(".header-panel").outerHeight());
+    $(".pages").height($(window).height());
+  }).trigger("resize");
+
+  $(".menu li").click(function () {
+    // Menu
+    if (!$(this).data("target")) return;
+    if ($(this).is(".active")) return;
+    $(".menu li").not($(this)).removeClass("active");
+    $(".page").not(page).removeClass("active").hide();
+    window.page = $(this).data("target");
+    var page = $(window.page);
+    window.location.hash = window.page;
+    $(this).addClass("active");
+
+
+    page.show();
+
+    var totop = setInterval(function () {
+      $(".pages").animate({scrollTop: 0}, 0);
+    }, 1);
+
+    setTimeout(function () {
+      page.addClass("active");
+      setTimeout(function () {
+        clearInterval(totop);
+      }, 1000);
+    }, 100);
+  });
+
+  function cleanSource(html) {
+    var lines = html.split(/\n/);
+
+    lines.shift();
+    lines.splice(-1, 1);
+
+    var indentSize = lines[0].length - lines[0].trim().length,
+        re = new RegExp(" {" + indentSize + "}");
+
+    lines = lines.map(function (line) {
+      if (line.match(re)) {
+        line = line.substring(indentSize);
+      }
+
+      return line;
+    });
+
+    lines = lines.join("\n");
+
+    return lines;
+  }
+
+  $("#opensource").click(function () {
+    $.get(window.location.href, function (data) {
+      var html = $(data).find(window.page).html();
+      html = cleanSource(html);
+      $("#source-modal pre").text(html);
+      $("#source-modal").modal();
+    });
+  });
+</script>
+
+<!-- Twitter Bootstrap -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Material Design for Bootstrap -->
+<script src="./js/material.js"></script>
+<script src="./js/ripple.js"></script>
+<script>
+  $.material.init();
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+body{
+	background-color:#e9e9e9;
+}
+html, body
+{
+    height: 100%;
+    text-transform: capitalize;
+}
+.welcome{
+    max-height: 80%;
+
+}
+.header {
+	display: block;
+	line-height: 1.5em;
+	padding: 5px 20px 5px;
+	background: none repeat scroll 0% 0% #FFF;
+	font-size: 15px;
+	font-family: sans-serif;
+	overflow: auto;
+
+}
+.header ul>li>a{
+	color: #563d7c;
+}
+.header ul>li>a:focus{
+	background: #e53d2c;
+}
+.header ul>li>a:hover{
+	color: #000;
+}
+.header img{
+	padding: 5px 5px 0px 5px;
+}
+.header-margin{
+	margin: 10px 0 0 0;
+}
+.welcome{
+	/*overflow: auto;*/
+    font-weight: 600;
+    text-shadow: none;
+    padding: 15px;
+}
+
+.half-width{
+	width: 50%;
+}
+.full-width{
+	width: 100%;
+}
+.inline-display{
+	display: inline-block;
+}
+.button{
+
+    border-radius: 14px;
+
+    height: 30px;
+    color: white;
+}
+.space{
+	margin-top: 40px;
+}
+.container{
+	padding: 10px;
+}
+.odd{
+	background-color: #cccccc !important;
+	border-bottom: 1px solid #ececec;
+}
+.even{
+	border-bottom: 1px solid #ececec;
+}
+.sorting_1{
+	background-color: transparent !important;
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #111;
+    border: 1px solid #000;
+}
+#example th,#example td,#examplePortfolio th,#examplePortfolio td{
+	border-right: 1px solid #000;
+}
+#example th:last-child,#example td:last-child,#examplePortfolio th:last-child,#examplePortfolio td:last-child{
+	border-right: none;
+}
+input[type="text"],input[type="file"],input[type="password"]{
+	width:35%;
+}
+.form-control.form-date.custom-width{
+	width:34%;
+}
+.input-group-addon{
+	padding: 6px 9px 6px 9px;
+}
+.custom-width{
+	/*width:35%;*/
+	width:17%;
+}
+nav {
+
+    overflow: auto;
+    float: right;
+}
+
+.calIcon{
+	/* float: left; */
+    line-height: inherit;
+    display: inline-table;
+}
+.form-date.date_width{
+	width: 67%;
+}
+.new-width{
+	width:88%;
+}
+.header hr{
+	margin-top: 4px;
+    margin-bottom: 4px;
+}
+.header div{
+	overflow: auto;
+}
+.header h3{
+	padding-left: 10px;
+    vertical-align: baseline;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+nav{
+	width:100%;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #000	;
+    background-color: #eee;
+    border: 1px solid #5bc0de;
+}
+#marketFeed{
+	display:none;
+}
+.white-background{
+	background: #fff;
+}
+.no-magrin{
+	margin-bottom: 0px;
+}
+.logo-padding{
+	padding-bottom: 10px;
+}
+#search{
+	margin-bottom: 10px;
+    padding-left: 2px;
+}
+.custom_margin{
+	margin: 10px 0px 10px 10px;
+}
+#totVal{
+	width:60%;
+}
+.no_display{
+	display: none;
+}
+.help{
+	margin-left: 10px;
+}
+.help:hover{
+	color: #5bc0de;
+}
+#bs-navbar{
+	width:100%;
+}
+#header{
+	margin-top: 5px;
+}
+td>input[type="text"]{
+	width:100%;
+}
+.table{
+	text-transform: initial;
+}
+.focus{
+	font-size: 25px;
+	text-decoration: none;
+	color:#6495ED !important;
+}
+a:hover, a:focus {
+
+    text-decoration: none;
+}
